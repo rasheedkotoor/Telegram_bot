@@ -101,11 +101,11 @@
     <table>
         <thead>
         <tr>
+            <th>User Id</th>
             <th>Username</th>
             <th>First Name</th>
-            <th>Fat_click</th>
-            <th>Dumb_click</th>
-            <th>Stupid_click</th>
+            <th>Message count</th>
+
 
         </tr>
         </thead>
@@ -113,11 +113,10 @@
         {% for user in users %}
 
         <tr>
+            <td>{{ user.id }}</td>
             <td>{{ user.username }}</td>
             <td>{{ user.first_name }}</td>
-            <td>{{ user.fat_btn }}</td>
-            <td>{{ user.dumb_btn }}</td>
-            <td>{{ user.stupid_btn }}</td>
+            <td>{{ user.messages_set.all|length }}</td>
         </tr>
         {% endfor %}
         </tbody>

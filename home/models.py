@@ -7,6 +7,11 @@ class TeleBot(models.Model):
     userid = models.CharField(max_length=100, null=True)
     username = models.CharField(max_length=100, null=True)
     first_name = models.CharField(max_length=100, null=True)
-    fat_btn = models.IntegerField(default=0)
-    dumb_btn = models.IntegerField(default=0)
-    stupid_btn = models.IntegerField(default=0)
+
+    def __str__(self):
+        return self.username
+
+
+class Messages(models.Model):
+    user = models.ForeignKey(TeleBot, on_delete=models.CASCADE)
+    text = models.TextField(null=True)

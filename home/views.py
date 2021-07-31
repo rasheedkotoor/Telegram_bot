@@ -7,7 +7,6 @@ from .tele_bot import *
 
 
 def home(request):
-    # data = get_response('fat')
     users = TeleBot.objects.all()
     return render(request, 'home/home.html', {'users': users})
 
@@ -18,8 +17,10 @@ def bot_run(request):
 
     # Commands
     dp.add_handler(CommandHandler('start', start_command))
-    # dp.add_handler(CommandHandler('help', help_command))
-    dp.add_handler(CallbackQueryHandler(press_button_callback))
+    dp.add_handler(CommandHandler('help', help_command))
+    dp.add_handler(CommandHandler('custom', custom_command))
+
+    # Messages
     dp.add_handler(MessageHandler(Filters.text, handle_message))
 
     # Log all errors
