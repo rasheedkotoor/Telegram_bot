@@ -27,7 +27,8 @@ DEBUG = True
 
 
 # https://telegram-bot-django.herokuapp.com/
-ALLOWED_HOSTS = ['127.0.0.1', 'telegram-bot-django.herokuapp.com']
+# ALLOWED_HOSTS = ['127.0.0.1', 'telegram-bot-django.herokuapp.com']  # master
+ALLOWED_HOSTS = ['127.0.0.1', 'impress-ai-task.herokuapp.com']
 
 
 # Application definition
