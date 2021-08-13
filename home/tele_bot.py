@@ -11,7 +11,7 @@ from telegram.ext import *
 from .helpers import get_response
 from .models import TeleBot
 
-API_KEY = '1911758206:AAFeV4L8yMNVyTWpKOjxhZaYMY1Ah2RktXY'
+API_KEY = '1911758206:AAEf5x4yCgrMKY_xLuGUHToub7rw2AaZ2PY'
 
 # Set up the logging
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
